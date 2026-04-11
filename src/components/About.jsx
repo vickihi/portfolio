@@ -1,6 +1,24 @@
+import { useEffect, useRef } from 'react'
+
 function About() {
+  const sectionRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          sectionRef.current.classList.add('about--visible')
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.2 }
+    )
+    if (sectionRef.current) observer.observe(sectionRef.current)
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <section className="about">
+    <section id="about" className="about" ref={sectionRef}>
       <div className="about-image">
         <svg viewBox="0 0 300 380" fill="none" xmlns="http://www.w3.org/2000/svg">
           {/* Head */}

@@ -10,7 +10,7 @@ import './index.css'
 // Root component that assembles all sections of the page
 function App() {
   return (
-    <>
+    <div className="container">
       <Navbar />
       <Hero />
       <About />
@@ -18,7 +18,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
-    </>
+    </div>
   )
 }
 
