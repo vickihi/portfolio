@@ -3,51 +3,62 @@ import { FiExternalLink, FiGithub } from 'react-icons/fi'
 const projects = [
   {
     id: '01',
-    title: 'Flowshop',
-    category: 'E-Commerce Platform',
-    shortDesc: 'A full-stack e-commerce platform with Stripe payments.',
-    desc: 'A full-stack e-commerce platform with product listings, cart management, user authentication, and payment integration using Stripe.',
-    color: '#f5c518',
-    tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    highlights: [
-      'Supports 10,000+ concurrent users with Redis caching',
-      'Integrated Stripe for secure checkout and subscriptions',
-      'JWT-based auth with OAuth2 (Google, GitHub)',
+    title: 'Flower Shop',
+    shortDesc: 'A full-stack e-commerce platform for floral business.',
+    desc: `An e-commerce platform for floral products featuring products browsing, user authentication, shopping cart management, user reviews, and secure payment processing. 
+           Originally a collaborative team project, independently refactored and extended with full-stack improvements across both frontend and backend.`,
+    image: '/images/flower-shop.png',
+    highlightsLabel: 'My Contribution',
+    tech: ['Python', 'Django', 'SQLite', 'Stripe'],
+    highlights: [ 
+      'Authentication — register/login, account update, order history, password reset',
+      'Stripe integration — secure payment with Stripe API and webhook',
+      'Product browsing — products list and product search',
+      'Review system — upvote/downvote on reviews with live vote count',
+      'Followups — optimized UX/UI, responsive design, code cleaning',
     ],
     demo: '#',
-    github: '#',
+    github: 'https://github.com/vickihi/flowerstore-new/',
   },
   {
     id: '02',
-    title: 'Social Media Dashboard',
-    category: 'Analytics Dashboard',
-    shortDesc: 'Real-time analytics dashboard aggregating data across platforms.',
-    desc: 'A responsive social media analytics dashboard that aggregates data from multiple platforms and displays real-time statistics.',
-    color: '#4f46e5',
-    tech: ['Vue.js', 'D3.js', 'REST API', 'Tailwind'],
+    title: 'Yoga Flow',
+    shortDesc: 'A custom WordPress theme for a yoga studio website.',
+    desc: `A custom WordPress theme for a modern, minimalist yoga studio website, built from scratch using WordPress's theme and plugin APIs.
+           Visitors can browse yoga classes by type and level, read about instructors, submit booking inquiries, 
+           and stay updated through the blog.`, 
+    image: '/images/yoga-flow.png',
+    tech: ['WordPress', 'PHP', 'Bootstrap', 'MySQL'],
     highlights: [
-      'Real-time data sync via WebSocket connections',
-      'Custom D3.js charts with animated transitions',
-      'Unified API layer aggregating 4 social platforms',
+      'Theme architecture — custom WordPress theme, clean responsive UI',
+      'Content management — classes & instructors via Custom Post Types',
+      'Classes — filter by type and level, archive and individual class pages',
+      'Blogs — category filtering, archive and post pages',
+      'Booking form — class options loaded dynamically from database',
+      'Carousel — displays classes and instructors',
     ],
     demo: '#',
-    github: '#',
+    github: 'https://github.com/vickihi/yogaflow',
   },
   {
     id: '03',
-    title: 'Blog Website Template',
-    category: 'Content Platform',
-    shortDesc: 'Minimal blog template with dark mode, search, and MDX support.',
-    desc: 'A clean and minimal blog website built with Next.js and MDX, featuring dark mode, search, and category filtering.',
-    color: '#e11d48',
-    tech: ['Next.js', 'MDX', 'TypeScript', 'Vercel'],
+    title: 'Issue Tracker',
+    shortDesc: 'A full-stack web app for managing projects and tracking issues.',
+    desc: `A collaborative full-stack issue tracking web application built with a React frontend with a custom client-side router and a Django REST API backend (provided). 
+           Users can manage projects, track issues within each project, assign members and labels, and filter issues by title, assignees, or labels.`,
+    image: '/images/issue-tracker.png',
+    staticImage: true,
+    highlightsLabel: 'My Contribution',
+    tech: ['React', 'TypeScript', 'Custom Router', 'Bun', 'uv'],
     highlights: [
-      '100/100 Lighthouse performance score',
-      'Full-text search powered by Algolia',
-      'Auto-generated RSS feed and sitemap',
+      'API integration — first to connect frontend to REST API, establishing initial data flow',
+      'Page scaffolding — built initial Home and Project page structure',
+      'Project CRUD — create, update and delete projects on the Home page',
+      'CRUD helper — reusable fetch functions to avoid code duplication',
+      'Component refactor — split Home.tsx into independently maintainable components',
     ],
     demo: '#',
-    github: '#',
+    github: 'https://github.com/vickihi/issue-tracker-react',
   },
 ]
 
@@ -60,16 +71,7 @@ function Projects() {
           <div key={project.id} className="project-item">
             <div className="project-image" style={{ background: project.color }}>
               <div className="project-image-inner">
-                <div className="mock-window">
-                  <div className="mock-dots">
-                    <span /><span /><span />
-                  </div>
-                  <div className="mock-content">
-                    <div className="mock-line" />
-                    <div className="mock-line short" />
-                    <div className="mock-line" />
-                  </div>
-                </div>
+                <img src={project.image} alt={project.title} className={project.staticImage ? "project-static-image" : "project-scroll-image"} />
               </div>
               <div className="project-overlay">
                 <a href={project.demo} className="overlay-btn" target="_blank" rel="noreferrer">
@@ -86,8 +88,7 @@ function Projects() {
               <div className="project-info-default">
                 <span className="project-number">{project.id}</span>
                 <h3 className="project-title">{project.title}</h3>
-                <span className="project-category">{project.category}</span>
-                <p className="project-desc">{project.shortDesc}</p>
+                <span className="project-category">{project.category || project.shortDesc}</span>
                 <ul className="project-tech">
                   {project.tech.map((t) => (
                     <li key={t} className="project-tech-tag">{t}</li>
@@ -99,10 +100,7 @@ function Projects() {
               <div className="project-info-hover">
                 <div className="info-header">
                   <span className="project-number">{project.id}</span>
-                  <div>
-                    <h3 className="project-title">{project.title}</h3>
-                    <span className="project-category">{project.category}</span>
-                  </div>
+                  <h3 className="project-title">{project.title}</h3>
                 </div>
                 <div className="info-section">
                   <span className="info-label">Overview</span>
@@ -117,7 +115,7 @@ function Projects() {
                   </ul>
                 </div>
                 <div className="info-section">
-                  <span className="info-label">Highlights</span>
+                  <span className="info-label">{project.highlightsLabel || 'Highlights'}</span>
                   <ul className="info-highlights">
                     {project.highlights.map((h) => (
                       <li key={h}>{h}</li>

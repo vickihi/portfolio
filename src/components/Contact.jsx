@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { FaFacebook, FaRedditAlien, FaTwitter, FaDiscord } from 'react-icons/fa'
+import { FaLinkedin, FaGithub } from 'react-icons/fa'
+import emailjs from '@emailjs/browser'
 
 function Contact() {
   const [form, setForm] = useState({ name: '', email: '', website: '', message: '' })
@@ -10,7 +11,17 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    alert('Message sent! (dummy)')
+    emailjs.send(
+      'service_bgl41wq',
+      'template_ytgched',
+      { name: form.name, email: form.email, website: form.website, message: form.message },
+      'RrsWqFWKCvIiPPSCL'
+    ).then(() => {
+      alert('Message sent!')
+      setForm({ name: '', email: '', website: '', message: '' })
+    }).catch(() => {
+      alert('Something went wrong. Please try again.')
+    })
   }
 
   return (
@@ -20,9 +31,10 @@ function Contact() {
           <input
             type="text"
             name="name"
-            placeholder="Your name"
+            placeholder="Your name*"
             value={form.name}
             onChange={handleChange}
+            required
           />
           <input
             type="email"
@@ -44,29 +56,27 @@ function Contact() {
             rows={6}
             value={form.message}
             onChange={handleChange}
+            required
           />
           <div className="contact-actions">
             <button type="submit" className="send-btn">Get In Touch</button>
-            <div className="contact-social">
-              <a href="#" aria-label="Facebook"><FaFacebook /></a>
-              <a href="#" aria-label="Reddit"><FaRedditAlien /></a>
-              <a href="#" aria-label="Twitter"><FaTwitter /></a>
-              <a href="#" aria-label="Discord"><FaDiscord /></a>
+            <div className="social-icons">
+              <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
+              <a href="#" aria-label="GitHub"><FaGithub /></a>
             </div>
           </div>
         </form>
       </div>
       <div className="contact-right">
         <h2 className="contact-heading">
-          Let&apos;s talk for<br />
-          <strong>Something special</strong>
+          Let&apos;s build<br/>
+          <strong>Something Thoughtful</strong>
         </h2>
         <p className="contact-tagline">
-          I seek to push the limits of creativity to create high-engaging,
-          user-friendly and memorable interactive experiences.
+          I'm open to full-time opportunities, freelance projects, or collaborations. 
+          Whether you have a product idea or need a developer to join your team - let&apos;s connect!
         </p>
-        <p className="contact-email">johndoe@gmail.com</p>
-        <p className="contact-phone">+1 234 567 890</p>
+        <p className="contact-email">vickihi2000@gmail.com</p>
       </div>
     </section>
   )

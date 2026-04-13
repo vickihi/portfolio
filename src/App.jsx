@@ -10,15 +10,17 @@ import './index.css'
 // Root component that assembles all sections of the page
 function App() {
   return (
-    <div className="container">
+    <>
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
+      <div className="container">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
+    </>
   )
 }
 

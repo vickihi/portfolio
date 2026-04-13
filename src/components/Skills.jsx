@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react'
 import {
   SiHtml5, SiCss, SiJavascript, SiTypescript, SiReact,
   SiPython, SiPhp, SiDjango,
-  SiMysql, SiGraphql,
   SiWordpress, SiBootstrap,
+  SiMysql, SiGraphql, SiSqlite,
   SiGithub, SiFigma
 } from 'react-icons/si'
 
@@ -18,10 +18,11 @@ const skills = [
   { icon: <SiPython />, name: 'Python' },
   { icon: <SiPhp />, name: 'PHP' },
   { icon: <SiDjango />, name: 'Django' },
+  { icon: <SiWordpress />, name: 'WordPress' },
   { icon: <SiBootstrap />, name: 'Bootstrap' },
   { icon: <SiMysql />, name: 'MySQL' },
+  { icon: <SiSqlite />, name: 'SQLite' },
   { icon: <SiGraphql />, name: 'GraphQL' },
-  { icon: <SiWordpress />, name: 'WordPress' },
   { icon: <SiGithub />, name: 'GitHub' },
   { icon: <SiFigma />, name: 'Figma' },
 ]
