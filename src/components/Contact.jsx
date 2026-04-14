@@ -12,10 +12,10 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault()
     emailjs.send(
-      'service_bgl41wq',
-      'template_ytgched',
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
       { name: form.name, email: form.email, website: form.website, message: form.message },
-      'RrsWqFWKCvIiPPSCL'
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     ).then(() => {
       alert('Message sent!')
       setForm({ name: '', email: '', website: '', message: '' })
