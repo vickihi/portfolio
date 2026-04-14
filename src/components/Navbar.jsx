@@ -9,15 +9,15 @@ function Navbar() {
       <div className="navbar-inner">
         <div className="nav-logo">
           <a href="#">
-            <img src="/images/logo.png" alt="logo"/>
+            <img src="/images/logo-nav.png" alt="logo" style ={{ width: 70, height: 70 }}/>
           </a>
         </div>
-        <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        <button className={`hamburger${menuOpen ? ' open' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <nav className="nav-links">
+        <nav className={`nav-links${menuOpen ? ' open' : ''}`}>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a>
           <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>

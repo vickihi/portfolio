@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
 
 const projects = [
@@ -63,12 +64,20 @@ const projects = [
 ]
 
 function Projects() {
+  const [activeId, setActiveId] = useState(null)
+
+  useEffect(() => {
+    const close = () => setActiveId(null)
+    document.addEventListener('click', close)
+    return () => document.removeEventListener('click', close)
+  }, [])
+
   return (
     <section id="projects" className="projects">
       <h2 className="section-title projects-heading">My <strong>Projects</strong></h2>
       <div className="projects-list">
         {projects.map((project) => (
-          <div key={project.id} className="project-item">
+          <div key={project.id} className={`project-item${activeId === project.id ? ' touched' : ''}`}>
             <div className="project-image" style={{ background: project.color }}>
               <div className="project-image-inner">
                 <img src={project.image} alt={project.title} className={project.staticImage ? "project-static-image" : "project-scroll-image"} />
@@ -83,7 +92,7 @@ function Projects() {
               </div>
             </div>
 
-            <div className="project-info">
+            <div className="project-info" onClick={(e) => { e.stopPropagation(); setActiveId(prev => prev === project.id ? null : project.id) }}>
               {/* default state */}
               <div className="project-info-default">
                 <span className="project-number">{project.id}</span>

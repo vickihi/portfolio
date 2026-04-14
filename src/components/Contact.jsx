@@ -61,8 +61,8 @@ function Contact() {
           <div className="contact-actions">
             <button type="submit" className="send-btn">Get In Touch</button>
             <div className="social-icons">
-              <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
-              <a href="#" aria-label="GitHub"><FaGithub /></a>
+              <a href="https://www.linkedin.com/in/weiwei-guo-3a6aa4401/" aria-label="LinkedIn"><FaLinkedin /></a>
+              <a href="https://github.com/vickihi/" aria-label="GitHub"><FaGithub /></a>
             </div>
           </div>
         </form>
@@ -73,7 +73,7 @@ function Contact() {
           <strong>Something Thoughtful</strong>
         </h2>
         <p className="contact-tagline">
-          I'm open to full-time opportunities, freelance projects, or collaborations. 
+          I'm open to full-time opportunities, freelance projects, or collaborations.
           Whether you have a product idea or need a developer to join your team - let&apos;s connect!
         </p>
         <p className="contact-email">vickihi2000@gmail.com</p>
