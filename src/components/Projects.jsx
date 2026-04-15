@@ -6,13 +6,13 @@ const projects = [
     id: '01',
     title: 'Flower Shop',
     shortDesc: 'A full-stack e-commerce platform for floral business.',
-    desc: `An e-commerce platform for floral products featuring products browsing, user authentication, shopping cart management, user reviews, and secure payment processing. 
+    desc: `An e-commerce platform for floral products browsing, user authentication, shopping cart management, user reviews, and secure payment processing. 
            Originally a collaborative team project, independently refactored and extended with full-stack improvements across both frontend and backend.`,
     image: '/images/flower-shop.png',
     highlightsLabel: 'My Contribution',
     tech: ['Python', 'Django', 'SQLite', 'Stripe'],
     highlights: [ 
-      'Authentication — register/login, account update, order history, password reset',
+      'Authentication — signup/login, account update, order history, password reset',
       'Stripe integration — secure payment with Stripe API and webhook',
       'Product browsing — products list and product search',
       'Review system — upvote/downvote on reviews with live vote count',
@@ -26,8 +26,7 @@ const projects = [
     title: 'Yoga Flow',
     shortDesc: 'A custom WordPress theme for a yoga studio website.',
     desc: `A custom WordPress theme for a modern, minimalist yoga studio website, built from scratch using WordPress's theme and plugin APIs.
-           Visitors can browse yoga classes by type and level, read about instructors, submit booking inquiries, 
-           and stay updated through the blog.`, 
+           Visitors can browse yoga classes by type and level, read about instructors, submit booking inquiries, and stay updated through the blog.`, 
     image: '/images/yoga-flow.png',
     tech: ['WordPress', 'PHP', 'Bootstrap', 'MySQL'],
     highlights: [

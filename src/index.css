@@ -821,6 +821,10 @@ a {
     order: 2;
   }
 
+  .project-overlay {
+    pointer-events: none;
+  }
+
   .project-info {
     order: 1;
     width: 100%;
@@ -863,6 +867,7 @@ a {
 
   .project-item.touched .project-overlay {
     opacity: 1;
+    pointer-events: auto;
   }
 
   .project-scroll-image {

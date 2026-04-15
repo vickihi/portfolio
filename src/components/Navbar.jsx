@@ -9,7 +9,7 @@ function Navbar() {
       <div className="navbar-inner">
         <div className="nav-logo">
           <a href="#">
-            <img src="/images/logo-nav.png" alt="logo" style ={{ width: 70, height: 70 }}/>
+            <img src="/images/logo-nav.png" alt="logo" style ={{ width: 55, height: 55 }}/>
           </a>
         </div>
         <button className={`hamburger${menuOpen ? ' open' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
@@ -23,7 +23,7 @@ function Navbar() {
           <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
-        <a href="#" className="resume-btn">
+        <a href="/WeiweiGuo_Resume.pdf" download className="resume-btn">
           Resume <FiDownload />
         </a>
       </div>

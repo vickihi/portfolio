@@ -5,7 +5,7 @@ function Hero() {
     <section className="hero">
       <div className="hero-left">
         <h1 className="hero-title">
-          Hello I&apos;am <strong>Weiwei.</strong><br />
+          Hello I&apos;m <strong>Weiwei.</strong><br />
           <strong>Fullstack</strong> Developer<br />
           Based In <strong>Montreal.</strong>
         </h1>
