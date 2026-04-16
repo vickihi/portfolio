@@ -82,9 +82,11 @@ function Projects() {
                 <img src={project.image} alt={project.title} className={project.staticImage ? "project-static-image" : "project-scroll-image"} />
               </div>
               <div className="project-overlay">
-                <a href={project.demo} className="overlay-btn" target="_blank" rel="noreferrer">
-                  <FiExternalLink /> Live
-                </a>
+                {project.demo && project.demo !== '#' && (
+                  <a href={project.demo} className="overlay-btn" target="_blank" rel="noreferrer">
+                    <FiExternalLink /> Live
+                  </a>
+                )}
                 <a href={project.github} className="overlay-btn overlay-btn--ghost" target="_blank" rel="noreferrer">
                   <FiGithub /> GitHub
                 </a>
