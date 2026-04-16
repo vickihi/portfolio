@@ -49,12 +49,14 @@ After a user completes payment on Stripe's hosted checkout page, Stripe sends a 
 - **Local**: Stripe CLI (`stripe listen`) forwards webhook events to `localhost` and generates a temporary webhook secret.
 - **Production**: A webhook endpoint is registered in the Stripe Dashboard pointing to the live server URL, and Stripe issues a permanent webhook secret stored as an environment variable on Render.
 
-### Yoga Flow — (WordPress, TBD)
+### Yoga Flow — Vercel (Static Export)
+
+WordPress does not run on Vercel. The site was exported to static HTML/CSS/JS using the **Simply Static** plugin, then deployed to Vercel the same way as the portfolio.
 
 ---
 
 ## Projects
 
 - [Flower Shop](https://flowerstore-xcmf.onrender.com) — Full-stack Django e-commerce app
-- [Yoga Flow](#) — Custom WordPress theme
+- [Yoga Flow](https://yogaflow-static.vercel.app) — Custom WordPress theme
 - [Issue Tracker](https://github.com/vickihi/issue-tracker-react) — React + Django REST API

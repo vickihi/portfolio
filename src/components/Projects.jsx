@@ -37,7 +37,7 @@ const projects = [
       'Booking form — class options loaded dynamically from database',
       'Carousel — displays classes and instructors',
     ],
-    demo: '#',
+    demo: 'https://yogaflow-static.vercel.app',
     github: 'https://github.com/vickihi/yogaflow',
   },
   {
