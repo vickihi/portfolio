@@ -19,12 +19,12 @@ Live: [weiwei.dev](https://weiwei.dev)
 
 ## Deployment
 
-### Portfolio — Vercel
+### 👩‍💻 Portfolio — Vercel
 
 The frontend is static files (HTML/JS/CSS). Vercel is purpose-built for this — free, and automatically redeploys on every push to `main`.
 Custom domain `weiwei.dev` configured via Namecheap DNS.
 
-### Flower Shop — Render
+### 🌸 Flower Shop — Render
 
 - **Local**: Django's built-in dev server (`manage.py runserver`).
 - **Production**: Django requires a production-grade server. **Render** provides a free Web Service that runs Django via **gunicorn** (a WSGI server).
@@ -49,7 +49,7 @@ After a user completes payment on Stripe's hosted checkout page, Stripe sends a 
 - **Local**: Stripe CLI (`stripe listen`) forwards webhook events to `localhost` and generates a temporary webhook secret.
 - **Production**: A webhook endpoint is registered in the Stripe Dashboard pointing to the live server URL, and Stripe issues a permanent webhook secret stored as an environment variable on Render.
 
-### Yoga Flow — Vercel (Static Export)
+### 🧘 Yoga Flow — Vercel (Static Export)
 
 WordPress does not run on Vercel. The site was exported to static HTML/CSS/JS using the **Simply Static** plugin, then deployed to Vercel the same way as the portfolio.
 
@@ -57,6 +57,6 @@ WordPress does not run on Vercel. The site was exported to static HTML/CSS/JS us
 
 ## Projects
 
-- [Flower Shop](https://flowerstore-xcmf.onrender.com) — Full-stack Django e-commerce app
-- [Yoga Flow](https://yogaflow-static.vercel.app) — Custom WordPress theme
-- [Issue Tracker](https://github.com/vickihi/issue-tracker-react) — React + Django REST API
+- 🌸 [Flower Shop](https://flowerstore-xcmf.onrender.com) — Full-stack Django e-commerce app
+- 🧘 [Yoga Flow](https://yogaflow-static.vercel.app) — Custom WordPress theme
+- 🐛 [Issue Tracker](https://github.com/vickihi/issue-tracker-react) — React + Django REST API
