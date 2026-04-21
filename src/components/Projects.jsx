@@ -51,7 +51,7 @@ const projects = [
     highlightsLabel: 'My Contribution',
     tech: ['React', 'TypeScript', 'Bun', 'uv'],
     highlights: [
-      'API integration — Connect the React frontend to Django backend, establishing the initial data flow',
+      'API integration — Connected the React frontend to Django backend, establishing the initial data flow',
       'Project CRUD — implemented full CRUD functionality for project management',
       'Reusable API Layer — developed a reusable utility to standardize API requests and reduce code duplication',
       'Component refactor — refactored Home page into modular components, improving maintainability and scalability',
