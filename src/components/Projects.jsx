@@ -18,7 +18,7 @@ const projects = [
       'Review System — Upvote/Downvote on reviews with live vote count',
       'Follow-ups — UX/UI improvements, responsive design, code cleanup',
     ],
-    demo: 'https://flowerstore-xcmf.onrender.com',
+    demo: 'https://flowerstore-new.onrender.com/',
     github: 'https://github.com/vickihi/flowerstore-new/',
   },
   {
